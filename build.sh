@@ -10,7 +10,4 @@ OUT_DIR="./"
 python3 -m grpc_tools.protoc -I./proto --python_out=$OUT_DIR --grpc_python_out=$OUT_DIR ./proto/image.proto
 
 mv client.py client
-chmod +x client
-
 mv server.py server
-chmod +x client
