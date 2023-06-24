@@ -3,13 +3,22 @@ This project is an implementation of an image rotation and mean filter service u
 
 ## Project Structure
 
+- This solution requires cleen installation of Ubuntu 22.04.
 - `proto/image.proto`: The Protocol Buffers definition file for the image service.
-- `build.sh`: Run this file in the Linux environment to create `image_pb2.py` and `image_pb2_grpc.py` from `proto/image.proto`.
-- `setup.sh`: Run this file in the Linux environment to update the system, install python3 and pip3 and also install required python libararies.
+- `build.sh`: Run this file in the Ubuntu environment to create `image_pb2.py` and `image_pb2_grpc.py` from `proto/image.proto`.
+- `setup.sh`: Run this file in the Ubuntu environment to update the system, install python3 and pip3 and also install required python libararies.
 - `server.py`: The Python script for the image service server.
 - `client.py`: The Python script for the image service client.
 
 ## Run Server:
 ### Run server locally:
-to run server locally can use following command:
-python3 server.py --host localhost --port 50051
+To run server locally, can use following command: `python3 server.py --host localhost --port 50051`
+### Run server remotely: 
+To run server to be accessible from a remote machine, can use following command: `python3 server.py --host 0.0.0.0 --port 50051` 
+The --host argument of the server script should be set to 0.0.0.0 to accept connections from any IP address.
+
+## Run Client:
+To run client, run the following command: `python3 client.py --input path_to_input.png --output path_to_output.png --rotate NINETY_DEG --mean --host server_public_ip_or_hostname --port 50051`
+
+Client can accept 3 inputs (`NINETY_DEG`, `ONE_EIGHTY_DEG`, `TWO_SEVENTY_DEG`) for 90, 180, 270 degree rotations.
+
