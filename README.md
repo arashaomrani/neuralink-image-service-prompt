@@ -3,10 +3,10 @@ This project is an implementation of an image rotation and mean filter service u
 
 ## Project Structure
 
-- This solution requires cleen installation of Ubuntu 22.04.
+- This solution requires clean installation of macOS.
 - `proto/image.proto`: The Protocol Buffers definition file for the image service.
-- `setup.sh`: Run this file in the Ubuntu environment to update the system, install python3 and pip3 and also install required python libararies. 
-- `build.sh`: Run this file in the Ubuntu environment to create `image_pb2.py` and `image_pb2_grpc.py` from `proto/image.proto`. and also to convert server.py and client.py to executable server and client.
+- `setup.sh`: Run this file in the macOS environment to update the system, install python3 and pip3 and also install required python libararies. 
+- `build.sh`: Run this file in the macOS environment to create `image_pb2.py` and `image_pb2_grpc.py` from `proto/image.proto`. and also to convert server.py and client.py to executable server and client.
 - `server.py`: The Python script for the image service server.
 - `client.py`: The Python script for the image service client.
 
