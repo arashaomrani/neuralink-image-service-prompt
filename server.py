@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import grpc
 from concurrent import futures
 from PIL import Image
